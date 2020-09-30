@@ -1,4 +1,6 @@
-name: My-Portfolio-Mubashir
+# This is a basic workflow to help you get started with Actions
+
+name: MyPortFolio
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -35,14 +37,4 @@ jobs:
       run: npm install --global surge
       
     - name: Deploy to Surge
-      run: surge ./build  my-portfolio-mubashir.surge.sh --token ${{secrets.MY_TOKEN}}
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: surge ./build pointless-jellyfish.surge.sh --token ${{secrets.MY_PORTFOLIO}}
